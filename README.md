@@ -15,7 +15,7 @@ The **DOTM** file extension is a Microsoft Word File template developed by M
 
 The law firm makes use of .dotm template files to bill for services.  These template files had hard-coded pricing amounts that needed to be updated manually.  But in their large collection of templates, they did not know which files contained pricing info.
 
-By searching the dotm files for a '$' character, you can determine the subset of files that need to be reviewed and updated.  However, the dotm file is not a plain text file that can simply be read into python and examined ... Use your Google search and Stack Overflow skills to find out how dotm files can be decoded in python.  NOTE: Timebox your DOTM format research.  If you have not figured out the DOTM file format in 20 minutes, ask an instructor for a hint.
+By searching the dotm files for a '$' character, you can determine the subset of files that need to be reviewed and updated.  However, the dotm file is not a plain text file that can simply be read into python and examined ... Use your Google search and Stack Overflow skills to find out how dotm f iles can be decoded in python.  NOTE: Timebox your DOTM format research.  If you have not figured out the DOTM file format in 20 minutes, ask an instructor for a hint.
 
 ## Your Task
 Write a python program named `dotm_search.py`.  
