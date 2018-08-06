@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-Given a directory path, this searches all files in the path for a given text string 
-within the 'word/document.xml' section of a MSWord .dotm file.
+Given a directory path, this searches all files in the path for a given text
+string within the 'word/document.xml' section of a MSWord .dotm file.
 """
 import sys
 import os
@@ -41,11 +41,13 @@ def currentDir(text):
                 Match found in file """, directory + "/" + f, """
 
                 ...""", data[index - 40: index] + data[index:index + 40]
-   
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('text', help='text to search within each dotm file')
-    parser.add_argument('--dir', help='directory path containing dotm files to search. Default is cwd.')
+    parser.add_argument('--dir', help='directory path containing dotm files '
+                                      'to search. Default is cwd.')
     args = parser.parse_args()
 
     text = args.text
@@ -55,10 +57,8 @@ def main():
     elif not folder:
         currentDir(text)
     else:
-        print 'unknown option: ' 
+        print 'unknown option: '
         sys.exit(1)
 
 if __name__ == '__main__':
-  main()
-
-
+    main()
