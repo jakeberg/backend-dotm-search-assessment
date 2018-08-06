@@ -13,7 +13,7 @@ import argparse
 
 # Your awesome code begins here!
 
-def one(text, folder):
+def chosenDir(text, folder):
     os.chdir(folder)
     directory = os.getcwd()
     files = glob.glob('*.dotm')
@@ -29,7 +29,7 @@ def one(text, folder):
     os.chdir('../')
 
 
-def two(text):
+def currentDir(text):
     directory = os.getcwd()
     files = glob.glob('*.dotm')
     for f in files:
@@ -47,16 +47,13 @@ def main():
     parser.add_argument('text', help='text to search within each dotm file')
     parser.add_argument('--dir', help='directory path containing dotm files to search. Default is cwd.')
     args = parser.parse_args()
-    # if len(args) != 4 or len(sys.argv) != 3:
-    #     print 'usage: ./dotm_search.py text_to_search --dir directory_name'
-    #     sys.exit(1)
 
     text = args.text
     folder = args.dir
     if folder:
-        one(text, folder)
+        chosenDir(text, folder)
     elif not folder:
-        two(text)
+        currentDir(text)
     else:
         print 'unknown option: ' 
         sys.exit(1)
